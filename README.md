@@ -19,6 +19,9 @@ julia> a,c = DiscreteModalClustering.mean_distance_centrality_based_clustering(d
 ([3, 3, 3, 3, 3, 3, 3, 3, 3, 3  …  193, 193, 193, 193, 193, 193, 193, 193, 193, 193], [3, 193])
 
 julia> DiscreteModalClustering.plot_data_and_clustering(data, a)
+
+julia> Plots.savefig("plot.png")
+
 </pre>
 
 ![A plot](plot.png)
