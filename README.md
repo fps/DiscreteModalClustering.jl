@@ -1,7 +1,7 @@
 # DiscreteModalClustering.jl
 A naive implementation of some discrete approximative modal clustering algorithm variants
 
-<code>
+<pre>
 julia> import Plots
 
 julia> Plots.gr()
@@ -19,6 +19,6 @@ julia> a,c = DiscreteModalClustering.mean_distance_centrality_based_clustering(d
 ([3, 3, 3, 3, 3, 3, 3, 3, 3, 3  …  193, 193, 193, 193, 193, 193, 193, 193, 193, 193], [3, 193])
 
 julia> DiscreteModalClustering.plot_data_and_clustering(data, a)
-</code>
+</pre>
 
 ![A plot](plot.png)
