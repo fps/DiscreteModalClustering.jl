@@ -21,4 +21,4 @@ julia> a,c = DiscreteModalClustering.mean_distance_centrality_based_clustering(d
 julia> DiscreteModalClustering.plot_data_and_clustering(data, a)
 </code>
 
-(https://github.com/fps/DiscreteModalClustering.jl/blob/master/plot.png "a plot")
+![A plot](plot.png)
