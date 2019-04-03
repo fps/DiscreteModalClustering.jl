@@ -50,7 +50,7 @@ function clustering(idxs, centralities)
         
         new_assignments = old_assignments[old_assignments]
         
-        display(new_assignments == old_assignments)
+        #display(new_assignments == old_assignments)
         
         if new_assignments == old_assignments
             break
