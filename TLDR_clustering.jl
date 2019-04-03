@@ -3,28 +3,28 @@ function degree_centrality_based_clustering(data, radius)
     idxs = NearestNeighbors.inrange(tree, data, radius)
     centralities = DiscreteModalClustering.degree_centrality(idxs)
     assignments = DiscreteModalClustering.clustering(idxs, centralities)
-    return assignments,unique(assignments)
+    return assignments
 end
 
 function rmse_centrality_based_clustering(data, k)
     idxs,dists = knn_search(data, k)
     centralities = DiscreteModalClustering.rmse_centrality(dists)
     assignments = DiscreteModalClustering.clustering(idxs, centralities)
-    return assignments,unique(assignments)
+    return assignments
 end
 
 function mean_distance_centrality_based_clustering(data, k)
     idxs,dists = knn_search(data, k)
     centralities = DiscreteModalClustering.mean_distance_centrality(dists)
     assignments = DiscreteModalClustering.clustering(idxs, centralities)
-    return assignments,unique(assignments)
+    return assignments
 end
 
 function maximum_distance_centrality_based_clustering(data, k)
     idxs,dists = knn_search(data, k)
     centralities = DiscreteModalClustering.maximum_distance_centrality(dists)
     assignments = DiscreteModalClustering.clustering(idxs, centralities)
-    return assignments,unique(assignments)
+    return assignments
 end
 
 function kernel_density_knn_clustering1(data, kernel, k)
