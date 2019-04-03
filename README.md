@@ -12,15 +12,43 @@ Main.DiscreteModalClustering
 
 julia> data = hcat(randn(2,100), 3 .+ randn(2,100))
 2×200 Array{Float64,2}:
- -0.940709  0.472444   -0.101116  0.261072  -0.633587   -1.07857   …  4.54723  4.68166  4.36897  3.52653  2.60418  1.89551  3.69226
-  1.32727   0.0554025   0.278341  0.517826   0.0354807  -0.445128     2.74405  4.30819  1.81379  3.5382   2.73316  2.94458  3.46256
+ -0.492131  -0.115306  2.34308    1.78081   -0.28743   …  2.87752  2.97298  3.07812  3.0693   1.7247   1.53658
+ -0.408142  -2.75199   0.220442  -0.134554   0.272212     2.63324  3.26081  2.8648   2.73812  2.93432  2.83526
 
-julia> a,c = DiscreteModalClustering.mean_distance_centrality_based_clustering(data, 30)
-([3, 3, 3, 3, 3, 3, 3, 3, 3, 3  …  193, 193, 193, 193, 193, 193, 193, 193, 193, 193], [3, 193])
+julia> a = DiscreteModalClustering.maximum_distance_centrality_based_clustering(data, 30)
+200×3 Array{Int64,2}:
+  19   19   19
+   1   19   19
+  24   22   19
+  42   19   19
+  19   19   19
+  19   19   19
+  68   19   19
+  19   19   19
+  21   19   19
+   5   19   19
+  19   19   19
+  68   19   19
+  22   19   19
+   ⋮
+ 195  185  185
+ 195  185  185
+  44   19   19
+ 185  185  185
+ 124  185  185
+ 195  185  185
+ 185  185  185
+ 185  185  185
+ 185  185  185
+ 185  185  185
+ 195  185  185
+ 195  185  185
 
-julia> DiscreteModalClustering.plot_data_and_clustering(data, a)
+julia> DiscreteModalClustering.plot_data_and_clustering(data, a[:,3])
 
 julia> Plots.savefig("plot.png")
+
+julia>
 
 </pre>
 
